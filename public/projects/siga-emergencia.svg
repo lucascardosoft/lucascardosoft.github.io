@@ -1,0 +1,32 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract emergency care workflow composition">
+  <rect width="800" height="600" fill="#0b0e14"/>
+  <g stroke="#1c2230" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+  </g>
+  <g fill="none" stroke="#5b7fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="80,300 200,300 240,220 280,380 320,180 360,300 480,300"/>
+  </g>
+  <g fill="#5b7fff">
+    <circle cx="320" cy="180" r="6"/>
+  </g>
+  <g fill="none" stroke="#2dd4bf" stroke-width="1.5" opacity="0.7">
+    <rect x="540" y="120" width="180" height="130" rx="10"/>
+    <line x1="560" y1="155" x2="700" y2="155"/>
+    <line x1="560" y1="180" x2="680" y2="180"/>
+    <line x1="560" y1="205" x2="660" y2="205"/>
+  </g>
+  <g fill="none" stroke="#2a3140" stroke-width="1.5">
+    <rect x="540" y="360" width="180" height="110" rx="10"/>
+  </g>
+  <g fill="#8b92a3">
+    <circle cx="565" cy="390" r="4"/>
+    <circle cx="565" cy="415" r="4"/>
+    <circle cx="565" cy="440" r="4"/>
+  </g>
+  <g fill="#8b92a3" font-family="monospace" font-size="13">
+    <text x="80" y="340">VITALS</text>
+    <text x="560" y="490">TRIAGE QUEUE</text>
+  </g>
+</svg>

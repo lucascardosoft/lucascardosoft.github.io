@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Lucas Cardoso — Product Designer",
+    "description": "Product designer working across enterprise SaaS, healthcare, AI-powered products, accessibility, and data visualization."
+  },
+  "nav": {
+    "home": "Lucas Cardoso",
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Lucas Cardoso is Product Designer at Elsevier",
+    "sub": "I design products for healthcare, enterprise SaaS, and AI-driven tools, environments where the interface has to hold up under real operational pressure.",
+    "ctaPrimary": "View work",
+    "ctaSecondary": "Resume"
+  },
+  "about": {
+    "eyebrow": "About",
+    "heading": "Where the work sits",
+    "body": "With years of experience delivering products that impact millions of lives, I am always eager to learn, collaborate with diverse teams, and suggest improvements in products and processes. My goal is to design accessible, user-centered products that meet both customer needs and business objectives. I've worked in projects in healthcare, finance, advertising, marketing and customer support."
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "heading": "Problems I've worked on",
+    "sub": "A few case studies, in brief. Full write-ups — process, research, and the decisions behind them — live in Figma.",
+    "comingSoon": "Coming soon",
+    "comingSoonPassword": "Coming soon — password protected on release",
+    "requestAccess": "Request access",
+    "noResults": "No case studies match this filter yet."
+  },
+  "filters": {
+    "all": "All",
+    "healthcare": "Healthcare",
+    "enterprise": "Enterprise",
+    "ai": "AI",
+    "accessibility": "Accessibility",
+    "dashboards": "Dashboards",
+    "research": "Research",
+    "designSystems": "Design Systems",
+    "finance": "Finance"
+  },
+  "project": {
+    "reporting-hub": {
+      "headline": "Helping healthcare organizations understand product adoption",
+      "context": "Reporting Hub aggregates analytics and usage reporting across Elsevier's clinical products, including ClinicalKey AI, into a single view for the people who have to answer for adoption and outcomes.",
+      "responsibilities": [
+        "Interface and interaction design for dashboards and reporting views",
+        "Working alongside a Product Manager, Engineering, and a dedicated UX Researcher",
+        "Proposing research questions and discovery work beyond assigned tickets"
+      ],
+      "highlights": [
+        "Designed reusable reporting components adopted across multiple report types",
+        "Supported the migration to the Leyden Design System",
+        "Improved accessibility compliance through VPAT initiatives",
+        "Established dashboard patterns reused by later reporting products"
+      ],
+      "impact": "The audience — healthcare executives, medical directors, and account managers — needs to trust a number before they act on it. Most of the work is making that trust legible at a glance.",
+      "cta": "Open full case study",
+      "passwordNote": "Password protected"
+    },
+    "siga-emergencia": {
+      "headline": "Improving emergency care workflows for healthcare professionals",
+      "context": "SIGA Emergência supports emergency departments and hospital operations at Hapvida, one of Brazil's largest healthcare providers. The work meant redesigning high-complexity clinical workflows, integrating multiple systems, and keeping the interface fast and trustworthy for professionals working under time pressure.",
+      "responsibilities": [
+        "UX research and strategy for emergency and inpatient workflows",
+        "Maintaining the design system used across 12 healthcare products",
+        "Working directly with clinicians, developers, product managers, and stakeholders"
+      ],
+      "highlights": [
+        "Adopted in more than 800 medical units",
+        "25% improvement in operational efficiency",
+        "Led emergency and inpatient experience initiatives end to end"
+      ],
+      "impact": "",
+      "cta": "Open full case study",
+      "passwordNote": "Password protected"
+    },
+    "carrefour": {
+      "headline": "Reducing customer support complexity across enterprise operations",
+      "context": "This project modernized Carrefour's customer support ecosystem by migrating operations to Salesforce Service Cloud, redesigning the workflows that service teams rely on for high-volume operations.",
+      "responsibilities": [
+        "Product discovery and user flow mapping for agent-facing tools",
+        "Service and interaction design across more than 30 operational journeys",
+        "Running stakeholder workshops to align on scope and priorities"
+      ],
+      "highlights": [
+        "30% reduction in Average Handling Time",
+        "24% reduction in protocol openings",
+        "42% reduction in user error rate"
+      ],
+      "impact": "Agents were navigating a patchwork of legacy tools to resolve a single case. Most of the work was collapsing that into workflows that hold up at high volume.",
+      "cta": "Open full case study",
+      "passwordNote": "Password protected"
+    },
+    "interage": {
+      "headline": "Designing healthcare tools that support safer clinical decisions",
+      "context": "Interage is a healthcare platform focused on drug interaction analysis. The work centered on improving information architecture, search, and usability, so complex pharmaceutical information is easier to parse in the middle of a clinical decision.",
+      "responsibilities": [
+        "Information architecture and interaction design for search and results",
+        "Usability improvements based on how professionals actually use the tool",
+        "Ongoing contributions to product evolution alongside the team"
+      ],
+      "highlights": [
+        "Improved navigation across complex medical information",
+        "Simplified access to critical clinical data during time-sensitive decisions"
+      ],
+      "impact": "",
+      "cta": "Open full case study",
+      "passwordNote": "Password protected"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Let's talk about the work",
+    "body": "Open to conversations about product design roles and collaborations in healthcare, enterprise, and AI-driven products.",
+    "linkedin": "LinkedIn",
+    "resume": "Resume",
+    "email": "Email"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "themeToggle": {
+    "label": "Toggle theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "languageSwitcher": {
+    "label": "Toggle language"
+  }
+}

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract customer service flow composition">
+  <rect width="800" height="600" fill="#0b0e14"/>
+  <g stroke="#1c2230" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+  </g>
+  <g fill="none" stroke="#2a3140" stroke-width="1.5">
+    <path d="M100 480 L100 200 A20 20 0 0 1 120 180 L340 180 A20 20 0 0 1 360 200 L360 260 A20 20 0 0 1 340 280 L200 280 L160 320 L160 280 L120 280 A20 20 0 0 1 100 260 Z"/>
+  </g>
+  <g fill="none" stroke="#5b7fff" stroke-width="2" stroke-linecap="round">
+    <path d="M440 220 L560 220 A20 20 0 0 1 580 240 L580 340 A20 20 0 0 1 560 360 L500 360 L500 400 L460 360 L440 360 A20 20 0 0 1 420 340 L420 240 A20 20 0 0 1 440 220 Z"/>
+  </g>
+  <g fill="#2dd4bf" opacity="0.85">
+    <circle cx="470" cy="290" r="5"/>
+    <circle cx="500" cy="290" r="5"/>
+    <circle cx="530" cy="290" r="5"/>
+  </g>
+  <g fill="none" stroke="#5b7fff" stroke-width="2">
+    <path d="M600 260 Q660 260 660 320 Q660 380 620 380" stroke-dasharray="4 6"/>
+    <path d="M615 372 L620 380 L629 378" stroke-dasharray="none"/>
+  </g>
+  <g fill="#8b92a3" font-family="monospace" font-size="13">
+    <text x="100" y="510">TICKET</text>
+    <text x="440" y="440">AGENT VIEW</text>
+  </g>
+</svg>

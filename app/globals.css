@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------
+   Design tokens
+   Dark (default): deep ink navy, not pure black.
+   Light (optional): warm paper white.
+   Accent: a single restrained "signal" blue, used sparingly.
+   A muted teal exists only for data-viz ticks / chips —
+   never for text or large surfaces.
+--------------------------------------------------------- */
+:root {
+  --bg: #0b0e14;
+  --bg-elevated: #12161f;
+  --bg-elevated-2: #171c27;
+  --fg: #edeef2;
+  --fg-muted: #8b92a3;
+  --fg-subtle: #7c8290;
+  --border: rgba(237, 238, 242, 0.08);
+  --border-strong: rgba(237, 238, 242, 0.16);
+  --accent: #5b7fff;
+  --accent-soft: #2dd4bf;
+  --focus-ring: #5b7fff;
+
+  --font-space-grotesk: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-plex-mono: "IBM Plex Mono", ui-monospace, "Courier New", monospace;
+}
+
+html[data-theme="light"] {
+  --bg: #faf9f7;
+  --bg-elevated: #f2f1ee;
+  --bg-elevated-2: #ebe9e4;
+  --fg: #58504c;
+  --fg-muted: #5b616f;
+  --fg-subtle: #6c717e;
+  --border: rgba(20, 22, 28, 0.08);
+  --border-strong: rgba(20, 22, 28, 0.14);
+  --accent: #3b5bdb;
+  --accent-soft: #0f9488;
+  --focus-ring: #3b5bdb;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-elevated-2: var(--bg-elevated-2);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* -----------------------------------------------------------
+   Signature element: a faint coordinate/axis grid.
+   Ties the whole chrome back to Lucas's data-visualization
+   specialty without drawing a literal chart anywhere.
+   Fixed and static (no motion, so unaffected by reduced-motion).
+----------------------------------------------------------- */
+.axis-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px);
+  background-size: 96px 100%;
+  background-position: center top;
+  opacity: 0.5;
+}
+
+html[data-theme="light"] .axis-grid {
+  opacity: 0.35;
+}
+
+/* Forces any logo (colored or dark) to render as a flat white mark —
+   used for client logos so a single source file works on any surface. */
+.logo-mono {
+  filter: brightness(0) invert(1);
+}
+
+/* Swaps between two logo files per theme, for brand marks whose only
+   dark-safe or light-safe variant isn't the other — no filter, real colors. */
+.theme-logo-dark {
+  display: inline-block;
+}
+.theme-logo-light {
+  display: none;
+}
+html[data-theme="light"] .theme-logo-dark {
+  display: none;
+}
+html[data-theme="light"] .theme-logo-light {
+  display: inline-block;
+}
+
+/* Continuous right-to-left logo strip for narrow viewports, where a
+   static row would otherwise wrap and stack the marks vertically. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 16s linear infinite;
+}
+
+.axis-tick {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--fg-subtle);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+.container-page {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}

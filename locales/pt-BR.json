@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Lucas Cardoso — Product Designer",
+    "description": "Product designer com atuação em SaaS enterprise, saúde, produtos com IA, acessibilidade e visualização de dados."
+  },
+  "nav": {
+    "home": "Lucas Cardoso",
+    "about": "Sobre",
+    "work": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "headline": "Lucas Cardoso é Product Designer na Elsevier",
+    "sub": "Desenho produtos para saúde, SaaS enterprise e ferramentas orientadas por IA, ambientes em que a interface precisa se sustentar sob pressão operacional real.",
+    "ctaPrimary": "Ver projetos",
+    "ctaSecondary": "Currículo"
+  },
+  "about": {
+    "eyebrow": "Sobre",
+    "heading": "Onde o trabalho acontece",
+    "body": "Com anos de experiência entregando produtos que impactam milhões de vidas, estou sempre disposto a aprender, colaborar com times diversos e sugerir melhorias em produtos e processos. Meu objetivo é desenhar produtos acessíveis e centrados no usuário, que atendam tanto às necessidades dos clientes quanto aos objetivos de negócio. Já trabalhei em projetos nas áreas de saúde, finanças, publicidade, marketing e atendimento ao cliente."
+  },
+  "work": {
+    "eyebrow": "Projetos selecionados",
+    "heading": "Problemas que já enfrentei",
+    "sub": "Alguns estudos de caso, em resumo. O material completo — processo, pesquisa e as decisões por trás deles — está no Figma.",
+    "comingSoon": "Em breve",
+    "comingSoonPassword": "Em breve — protegido por senha no lançamento",
+    "requestAccess": "Solicitar acesso",
+    "noResults": "Nenhum estudo de caso corresponde a este filtro ainda."
+  },
+  "filters": {
+    "all": "Todos",
+    "healthcare": "Saúde",
+    "enterprise": "Enterprise",
+    "ai": "IA",
+    "accessibility": "Acessibilidade",
+    "dashboards": "Dashboards",
+    "research": "Pesquisa",
+    "designSystems": "Design Systems",
+    "finance": "Finanças"
+  },
+  "project": {
+    "reporting-hub": {
+      "headline": "Ajudando organizações de saúde a entender a adoção de seus produtos",
+      "context": "O Reporting Hub reúne analytics e relatórios de uso dos produtos clínicos da Elsevier, incluindo o ClinicalKey AI, em uma visão única para quem precisa responder por adoção e resultados.",
+      "responsibilities": [
+        "Design de interface e interação para dashboards e telas de relatórios",
+        "Trabalho junto a um Product Manager, Engenharia e uma UX Researcher dedicada",
+        "Proposição de perguntas de pesquisa e descoberta além dos tickets já atribuídos"
+      ],
+      "highlights": [
+        "Componentes de relatório reutilizáveis adotados em múltiplos tipos de report",
+        "Apoio na migração para o Leyden Design System",
+        "Melhoria de conformidade de acessibilidade por meio de iniciativas de VPAT",
+        "Padrões de dashboard reaproveitados por produtos de relatório posteriores"
+      ],
+      "impact": "O público — executivos de saúde, diretores médicos e account managers — precisa confiar em um número antes de agir sobre ele. Boa parte do trabalho é tornar essa confiança legível de relance.",
+      "cta": "Abrir estudo de caso completo",
+      "passwordNote": "Protegido por senha"
+    },
+    "siga-emergencia": {
+      "headline": "Melhorando fluxos de atendimento de emergência para profissionais de saúde",
+      "context": "O SIGA Emergência apoia pronto-socorros e a operação hospitalar da Hapvida, uma das maiores operadoras de saúde do Brasil. O trabalho envolveu redesenhar fluxos clínicos de alta complexidade, integrar múltiplos sistemas e manter a interface rápida e confiável para profissionais atuando sob pressão de tempo.",
+      "responsibilities": [
+        "UX research e estratégia para fluxos de emergência e internação",
+        "Manutenção do design system usado em 12 produtos de saúde",
+        "Trabalho direto com médicos, desenvolvedores, product managers e stakeholders"
+      ],
+      "highlights": [
+        "Plataforma adotada em mais de 800 unidades médicas",
+        "25% de melhoria na eficiência operacional",
+        "Liderança de iniciativas de experiência em emergência e internação de ponta a ponta"
+      ],
+      "impact": "",
+      "cta": "Abrir estudo de caso completo",
+      "passwordNote": "Protegido por senha"
+    },
+    "carrefour": {
+      "headline": "Reduzindo a complexidade do atendimento ao cliente em operações enterprise",
+      "context": "Este projeto modernizou o ecossistema de atendimento ao cliente do Carrefour ao migrar as operações para o Salesforce Service Cloud, redesenhando os fluxos usados pelos times de atendimento em operações de alto volume.",
+      "responsibilities": [
+        "Descoberta de produto e mapeamento de fluxos de usuário para ferramentas de agente",
+        "Design de serviço e interação em mais de 30 jornadas operacionais",
+        "Condução de workshops com stakeholders para alinhar escopo e prioridades"
+      ],
+      "highlights": [
+        "30% de redução no Tempo Médio de Atendimento",
+        "24% de redução na abertura de protocolos",
+        "42% de redução na taxa de erro do usuário"
+      ],
+      "impact": "Os agentes navegavam por um mosaico de ferramentas legadas para resolver um único caso. Boa parte do trabalho foi condensar isso em fluxos que se sustentam em alto volume.",
+      "cta": "Abrir estudo de caso completo",
+      "passwordNote": "Protegido por senha"
+    },
+    "interage": {
+      "headline": "Desenhando ferramentas de saúde que apoiam decisões clínicas mais seguras",
+      "context": "O Interage é uma plataforma de saúde focada em análise de interação medicamentosa. O trabalho concentrou-se em melhorar arquitetura da informação, busca e usabilidade, para que informações farmacêuticas complexas fiquem mais fáceis de interpretar no meio de uma decisão clínica.",
+      "responsibilities": [
+        "Arquitetura da informação e design de interação para busca e resultados",
+        "Melhorias de usabilidade baseadas no uso real da ferramenta por profissionais",
+        "Contribuições contínuas para a evolução do produto junto ao time"
+      ],
+      "highlights": [
+        "Navegação melhorada em meio a informações médicas complexas",
+        "Acesso simplificado a dados clínicos críticos em decisões sensíveis ao tempo"
+      ],
+      "impact": "",
+      "cta": "Abrir estudo de caso completo",
+      "passwordNote": "Protegido por senha"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "heading": "Vamos falar sobre o trabalho",
+    "body": "Aberto a conversas sobre vagas de product design e colaborações em produtos de saúde, enterprise e IA.",
+    "linkedin": "LinkedIn",
+    "resume": "Currículo",
+    "email": "E-mail"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "themeToggle": {
+    "label": "Alternar tema",
+    "dark": "Escuro",
+    "light": "Claro"
+  },
+  "languageSwitcher": {
+    "label": "Alternar idioma"
+  }
+}
