@@ -2,15 +2,53 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { projects, type Project } from "@/data/projects";
 
-const clientOrder = ["reporting-hub", "carrefour", "siga-emergencia", "interage"];
+interface ClientLogo {
+  id: string;
+  company: string;
+  logo: string;
+  logoClassName?: string;
+}
 
-const clients = clientOrder
-  .map((id) => projects.find((p) => p.id === id))
-  .filter((p): p is Project => Boolean(p?.logo));
+/**
+ * Client marks shown in this strip — not every client here has a full
+ * case study in the Work section, so this list is intentionally kept
+ * separate from `data/projects.ts`.
+ */
+const clients: ClientLogo[] = [
+  {
+    id: "elsevier",
+    company: "Elsevier",
+    logo: "/companies/elsevier.svg",
+    logoClassName: "h-9 max-w-[150px]",
+  },
+  {
+    id: "carrefour",
+    company: "Carrefour",
+    logo: "/companies/carrefour.svg",
+    logoClassName: "h-12 max-w-[90px]",
+  },
+  {
+    id: "korn-ferry",
+    company: "Korn Ferry",
+    logo: "/companies/korn-ferry.svg",
+    logoClassName: "h-7 max-w-[150px]",
+  },
+  {
+    id: "hapvida",
+    company: "Hapvida",
+    logo: "/companies/hapvida.svg",
+    logoClassName: "h-7 max-w-[150px]",
+  },
+  {
+    id: "interage",
+    company: "Interage",
+    logo: "/companies/interage.svg",
+    logoClassName: "h-7 max-w-[150px]",
+  },
+];
 
-function Logo({ client, hidden }: { client: Project; hidden?: boolean }) {
+function Logo({ client, hidden }: { client: ClientLogo; hidden?: boolean }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element -- small brand SVG, not worth next/image overhead
     <img
