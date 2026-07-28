@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
 
+# claude code local config
+/.claude/
+
 # next.js
 /.next/
 /out/
