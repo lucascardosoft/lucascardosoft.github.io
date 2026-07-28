@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n/context";
 import { projects, type FilterTag } from "@/data/projects";
 import { ProjectFilters } from "./ProjectFilters";
@@ -60,28 +60,21 @@ export function Work() {
       />
 
       <div className="flex flex-col">
-        <AnimatePresence mode="popLayout">
-          {filtered.length ? (
-            filtered.map((project, index) => (
-              <motion.div
-                key={project.id}
-                layout
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ProjectSection project={project} index={index} />
-              </motion.div>
-            ))
-          ) : (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="container-page py-16 text-center text-sm text-fg-muted"
-            >
-              {dict.work.noResults}
-            </motion.p>
-          )}
-        </AnimatePresence>
+        {filtered.length ? (
+          filtered.map((project, index) => (
+            <motion.div key={project.id} layout transition={{ duration: 0.3 }}>
+              <ProjectSection project={project} index={index} />
+            </motion.div>
+          ))
+        ) : (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="container-page py-16 text-center text-sm text-fg-muted"
+          >
+            {dict.work.noResults}
+          </motion.p>
+        )}
       </div>
     </section>
   );
