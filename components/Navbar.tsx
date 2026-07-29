@@ -96,7 +96,13 @@ export function Navbar() {
             )}
             {dict.nav.menu}
           </button>
-          <LanguageSwitcher />
+          <LanguageSwitcher
+            className={cn(
+              scrolled || isOpen
+                ? "border-border bg-bg-elevated/70 backdrop-blur-md"
+                : "border-transparent bg-transparent"
+            )}
+          />
         </header>
       </div>
 
