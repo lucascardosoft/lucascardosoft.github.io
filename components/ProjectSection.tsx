@@ -11,6 +11,12 @@ interface ProjectSectionProps {
   index: number;
 }
 
+// Hidden per request — flip these back on to restore the sections rather
+// than deleting the JSX below.
+const SHOW_RESPONSIBILITIES = false;
+const SHOW_HIGHLIGHTS = false;
+const SHOW_IMPACT = false;
+
 export function ProjectSection({ project, index }: ProjectSectionProps) {
   const { dict } = useLanguage();
   const copy = dict.project[project.id as keyof typeof dict.project];
@@ -88,22 +94,24 @@ export function ProjectSection({ project, index }: ProjectSectionProps) {
             {copy.context}
           </p>
 
-          <ul className="mt-6 space-y-2">
-            {copy.responsibilities.map((item: string) => (
-              <li
-                key={item}
-                className="flex gap-3 text-sm leading-relaxed text-fg-muted"
-              >
-                <span
-                  className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent-soft"
-                  aria-hidden="true"
-                />
-                {item}
-              </li>
-            ))}
-          </ul>
+          {SHOW_RESPONSIBILITIES ? (
+            <ul className="mt-6 space-y-2">
+              {copy.responsibilities.map((item: string) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-sm leading-relaxed text-fg-muted"
+                >
+                  <span
+                    className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent-soft"
+                    aria-hidden="true"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : null}
 
-          {copy.highlights?.length ? (
+          {SHOW_HIGHLIGHTS && copy.highlights?.length ? (
             <ul className="mt-6 space-y-2">
               {copy.highlights.map((item: string) => (
                 <li
@@ -120,7 +128,7 @@ export function ProjectSection({ project, index }: ProjectSectionProps) {
             </ul>
           ) : null}
 
-          {copy.impact ? (
+          {SHOW_IMPACT && copy.impact ? (
             <p className="mt-6 max-w-lg border-l-2 border-accent/40 pl-4 text-sm leading-relaxed text-fg-muted italic">
               {copy.impact}
             </p>
