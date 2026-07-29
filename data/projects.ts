@@ -8,6 +8,14 @@ export type FilterTag =
   | "designSystems"
   | "finance";
 
+/**
+ * "public" — figmaUrl is set and links out directly.
+ * "restricted" — case is finished, but the link is never shipped in the
+ *   client bundle; visitors request access and get the link by email.
+ * "comingSoon" — case isn't ready yet, nothing to link or request.
+ */
+export type CaseAccess = "public" | "restricted" | "comingSoon";
+
 export interface Project {
   /** Matches a key under `project` in /locales/{locale}.json */
   id: string;
@@ -24,8 +32,9 @@ export interface Project {
   technologies: string[];
   tags: FilterTag[];
   image: string;
-  figmaUrl: string;
-  passwordProtected: boolean;
+  access: CaseAccess;
+  /** Only set (and only ever committed) for `access: "public"` cases. */
+  figmaUrl?: string;
 }
 
 /**
@@ -50,9 +59,7 @@ export const projects: Project[] = [
     technologies: ["Figma", "Miro", "Design System"],
     tags: ["healthcare", "enterprise", "ai"],
     image: "/projects/siga-emergencia.svg",
-    figmaUrl:
-      "https://www.figma.com/deck/Jjz4UqDUv3Xm8gR2WY6Bck/Lucas-Cardoso---Product-Designer---Portfolio-Hapvida?node-id=1-5327&viewport=-133%2C-89%2C0.62&t=C4RG1qP9i0PkL2G0-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-    passwordProtected: false,
+    access: "restricted",
   },
   {
     id: "carrefour",
@@ -64,9 +71,7 @@ export const projects: Project[] = [
     technologies: ["Figma", "Salesforce Service Cloud", "Miro"],
     tags: ["enterprise"],
     image: "/projects/carrefour.svg",
-    figmaUrl:
-      "https://www.figma.com/deck/1SLuFj4fRltgajxZlQQCgo/Carrefour-s-Support-Platform?node-id=2002-312&viewport=-133%2C-89%2C0.62&t=SmWbNP1U05jINEzj-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-    passwordProtected: false,
+    access: "restricted",
   },
   {
     id: "interage",
@@ -78,9 +83,9 @@ export const projects: Project[] = [
     technologies: ["Figma", "Miro"],
     tags: ["healthcare", "research"],
     image: "/projects/interage.svg",
+    access: "public",
     figmaUrl:
       "https://www.figma.com/deck/BdTPxmpXmnslg72H8A6V1a/Interage?node-id=4004-218&viewport=-133%2C-89%2C0.62&t=n172DLJChMawYHy2-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-    passwordProtected: false,
   },
   {
     id: "reporting-hub",
@@ -100,7 +105,6 @@ export const projects: Project[] = [
     ],
     tags: ["healthcare", "enterprise", "dashboards", "accessibility", "ai", "research"],
     image: "/projects/reporting-hub.svg",
-    figmaUrl: "",
-    passwordProtected: true,
+    access: "comingSoon",
   },
 ];

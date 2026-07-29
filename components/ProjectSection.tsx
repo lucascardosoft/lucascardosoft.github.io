@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lock, ArrowUpRight, TrendingUp } from "lucide-react";
+import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/data/projects";
@@ -9,6 +9,7 @@ import type { Project } from "@/data/projects";
 interface ProjectSectionProps {
   project: Project;
   index: number;
+  onRequestAccess: (company: string) => void;
 }
 
 // Hidden per request — flip these back on to restore the sections rather
@@ -17,7 +18,11 @@ const SHOW_RESPONSIBILITIES = false;
 const SHOW_HIGHLIGHTS = false;
 const SHOW_IMPACT = false;
 
-export function ProjectSection({ project, index }: ProjectSectionProps) {
+export function ProjectSection({
+  project,
+  index,
+  onRequestAccess,
+}: ProjectSectionProps) {
   const { dict } = useLanguage();
   const copy = dict.project[project.id as keyof typeof dict.project];
   const isEven = index % 2 === 0;
@@ -148,7 +153,7 @@ export function ProjectSection({ project, index }: ProjectSectionProps) {
           ) : null}
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            {project.figmaUrl ? (
+            {project.access === "public" && project.figmaUrl ? (
               <a
                 href={project.figmaUrl}
                 target="_blank"
@@ -158,27 +163,22 @@ export function ProjectSection({ project, index }: ProjectSectionProps) {
                 {copy.cta}
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
+            ) : project.access === "restricted" ? (
+              <button
+                type="button"
+                onClick={() => onRequestAccess(project.company)}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong"
+              >
+                {dict.work.requestAccess}
+              </button>
             ) : (
               <span
                 aria-disabled="true"
                 className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg-subtle"
               >
-                {project.passwordProtected
-                  ? dict.work.comingSoonPassword
-                  : dict.work.comingSoon}
+                {dict.work.comingSoon}
               </span>
             )}
-            {project.figmaUrl && project.passwordProtected ? (
-              <a
-                href={`mailto:lucascardosoft@gmail.com?subject=${encodeURIComponent(
-                  `Access request — ${project.company} case study`
-                )}`}
-                className="inline-flex items-center gap-1.5 text-xs text-fg-subtle underline-offset-2 transition-colors hover:text-fg hover:underline"
-              >
-                <Lock className="h-3.5 w-3.5" aria-hidden="true" />
-                {copy.passwordNote} · {dict.work.requestAccess}
-              </a>
-            ) : null}
           </div>
         </div>
 
