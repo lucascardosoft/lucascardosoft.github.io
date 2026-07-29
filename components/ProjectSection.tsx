@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 import { cn } from "@/lib/utils";
+import { createCaseAccessMailto } from "@/lib/mailto";
 import type { Project } from "@/data/projects";
 
 interface ProjectSectionProps {
   project: Project;
   index: number;
-  onRequestAccess: (company: string) => void;
 }
 
 // Hidden per request — flip these back on to restore the sections rather
@@ -18,11 +18,7 @@ const SHOW_RESPONSIBILITIES = false;
 const SHOW_HIGHLIGHTS = false;
 const SHOW_IMPACT = false;
 
-export function ProjectSection({
-  project,
-  index,
-  onRequestAccess,
-}: ProjectSectionProps) {
+export function ProjectSection({ project, index }: ProjectSectionProps) {
   const { dict } = useLanguage();
   const copy = dict.project[project.id as keyof typeof dict.project];
   const isEven = index % 2 === 0;
@@ -158,19 +154,21 @@ export function ProjectSection({
                 href={project.figmaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong hover:bg-bg-elevated-2"
               >
                 {copy.cta}
                 <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
             ) : project.access === "restricted" ? (
-              <button
-                type="button"
-                onClick={() => onRequestAccess(project.company)}
-                className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong"
+              <a
+                href={createCaseAccessMailto(dict.mailto.caseAccess, {
+                  title: copy.headline,
+                  company: project.company,
+                })}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong hover:bg-bg-elevated-2"
               >
                 {dict.work.requestAccess}
-              </button>
+              </a>
             ) : (
               <span
                 aria-disabled="true"

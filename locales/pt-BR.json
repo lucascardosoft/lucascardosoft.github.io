@@ -29,11 +29,17 @@
     "sub": "Alguns estudos de caso, em resumo. O material completo, com processo, pesquisa e as decisões por trás deles, está no Figma.",
     "comingSoon": "Em breve",
     "requestAccess": "Solicitar acesso",
-    "close": "Fechar",
-    "restrictedNote": "Este case é privado. Envie seu nome e e-mail que eu compartilho o link.",
-    "namePlaceholder": "Seu nome",
-    "emailPlaceholder": "Seu e-mail",
     "noResults": "Nenhum estudo de caso corresponde a este filtro ainda."
+  },
+  "mailto": {
+    "contact": {
+      "subject": "Contato via Portfólio",
+      "body": "Olá!\n\nVi seu portfólio e me interessei pelo seu trabalho.\n\nGostaria de conversar sobre uma oportunidade de colaboração.\n\nQuando tiver disponibilidade, podemos agendar uma conversa.\n\nObrigado!"
+    },
+    "caseAccess": {
+      "bodyWithCompany": "Olá!\n\nVi seu portfólio e tenho interesse em conhecer melhor o case da {{company}}:\n\n{{title}}\n\nEntendo que este projeto possui acesso restrito.\n\nGostaria de solicitar acesso para visualizar o estudo de caso completo.\n\nCaso seja necessário, posso fornecer mais informações sobre o contexto da oportunidade.\n\nObrigado!",
+      "bodyWithoutCompany": "Olá!\n\nVi seu portfólio e tenho interesse em conhecer melhor o case:\n\n{{title}}\n\nEntendo que este projeto possui acesso restrito.\n\nGostaria de solicitar acesso para visualizar o estudo de caso completo.\n\nCaso seja necessário, posso fornecer mais informações sobre o contexto da oportunidade.\n\nObrigado!"
+    }
   },
   "filters": {
     "label": "Filtrar por",

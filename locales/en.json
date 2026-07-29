@@ -29,11 +29,17 @@
     "sub": "A few case studies, in brief. Full write-ups with process, research, and the decisions behind them live in Figma.",
     "comingSoon": "Coming soon",
     "requestAccess": "Request access",
-    "close": "Close",
-    "restrictedNote": "This case is private. Send your name and email and I'll share the link.",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Your email",
     "noResults": "No case studies match this filter yet."
+  },
+  "mailto": {
+    "contact": {
+      "subject": "Portfolio contact",
+      "body": "Hi!\n\nI saw your portfolio and I'm interested in your work.\n\nI'd like to talk about a possible collaboration.\n\nWhenever you're available, we can schedule a call.\n\nThanks!"
+    },
+    "caseAccess": {
+      "bodyWithCompany": "Hi!\n\nI saw your portfolio and I'm interested in learning more about the {{company}} case:\n\n{{title}}\n\nI understand this project has restricted access.\n\nI'd like to request access to view the full case study.\n\nIf useful, I can share more context about the opportunity.\n\nThanks!",
+      "bodyWithoutCompany": "Hi!\n\nI saw your portfolio and I'm interested in learning more about this case:\n\n{{title}}\n\nI understand this project has restricted access.\n\nI'd like to request access to view the full case study.\n\nIf useful, I can share more context about the opportunity.\n\nThanks!"
+    }
   },
   "filters": {
     "label": "Filter by",

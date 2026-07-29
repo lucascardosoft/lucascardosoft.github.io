@@ -3,23 +3,27 @@
 import { motion } from "framer-motion";
 import { Link2, FileText, Mail } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
+import { createContactMailto } from "@/lib/mailto";
 
-const links = [
+const staticLinks = [
   {
     key: "linkedin" as const,
     href: "https://www.linkedin.com/in/lucas-cardoso-freitas/",
     icon: Link2,
   },
   { key: "resume" as const, href: "/resume.pdf", icon: FileText },
-  {
-    key: "email" as const,
-    href: "mailto:lucascardosoft@gmail.com",
-    icon: Mail,
-  },
 ];
 
 export function Contact() {
   const { dict } = useLanguage();
+  const links = [
+    ...staticLinks,
+    {
+      key: "email" as const,
+      href: createContactMailto(dict.mailto.contact),
+      icon: Mail,
+    },
+  ];
 
   return (
     <section id="contact" className="container-page py-28 md:py-36">
@@ -66,7 +70,7 @@ export function Contact() {
             href={href}
             target={key !== "email" ? "_blank" : undefined}
             rel={key !== "email" ? "noopener noreferrer" : undefined}
-            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-border-strong hover:bg-bg-elevated-2"
           >
             <Icon className="h-4 w-4" aria-hidden="true" />
             {dict.contact[key]}
