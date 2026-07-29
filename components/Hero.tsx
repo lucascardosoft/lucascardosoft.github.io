@@ -67,7 +67,7 @@ export function Hero() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-fg transition-colors hover:border-border-strong"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-fg transition-colors hover:border-border-strong hover:bg-bg-elevated-2"
           >
             <FileText className="h-4 w-4" aria-hidden="true" />
             {dict.hero.ctaSecondary}

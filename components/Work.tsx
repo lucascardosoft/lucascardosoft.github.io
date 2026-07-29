@@ -6,14 +6,10 @@ import { useLanguage } from "@/lib/i18n/context";
 import { projects, type FilterTag } from "@/data/projects";
 import { ProjectFilters } from "./ProjectFilters";
 import { ProjectSection } from "./ProjectSection";
-import { RequestAccessModal } from "./RequestAccessModal";
 
 export function Work() {
   const { dict } = useLanguage();
   const [active, setActive] = useState<FilterTag | "all">("all");
-  const [requestingCompany, setRequestingCompany] = useState<string | null>(
-    null
-  );
 
   const availableTags = useMemo(
     () => new Set(projects.flatMap((p) => p.tags)),
@@ -67,11 +63,7 @@ export function Work() {
         {filtered.length ? (
           filtered.map((project, index) => (
             <motion.div key={project.id} layout transition={{ duration: 0.3 }}>
-              <ProjectSection
-                project={project}
-                index={index}
-                onRequestAccess={setRequestingCompany}
-              />
+              <ProjectSection project={project} index={index} />
             </motion.div>
           ))
         ) : (
@@ -84,11 +76,6 @@ export function Work() {
           </motion.p>
         )}
       </div>
-
-      <RequestAccessModal
-        company={requestingCompany}
-        onClose={() => setRequestingCompany(null)}
-      />
     </section>
   );
 }
