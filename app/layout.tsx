@@ -14,7 +14,7 @@ import { ThemeProvider } from "@/lib/theme-provider";
 import { LanguageProvider } from "@/lib/i18n/context";
 
 export const metadata: Metadata = {
-  title: "Lucas Cardoso — Product Designer",
+  title: "Lucas Cardoso | Product Designer",
   description:
     "Product designer working across enterprise SaaS, healthcare, AI-powered products, accessibility, and data visualization.",
 };

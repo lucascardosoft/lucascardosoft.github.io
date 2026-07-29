@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Lucas Cardoso — Product Designer",
+    "title": "Lucas Cardoso | Product Designer",
     "description": "Product designer working across enterprise SaaS, healthcare, AI-powered products, accessibility, and data visualization."
   },
   "nav": {
@@ -26,10 +26,13 @@
   "work": {
     "eyebrow": "Selected work",
     "heading": "Problems I've worked on",
-    "sub": "A few case studies, in brief. Full write-ups — process, research, and the decisions behind them — live in Figma.",
+    "sub": "A few case studies, in brief. Full write-ups with process, research, and the decisions behind them live in Figma.",
     "comingSoon": "Coming soon",
-    "comingSoonPassword": "Coming soon — password protected on release",
     "requestAccess": "Request access",
+    "close": "Close",
+    "restrictedNote": "This case is private. Send your name and email and I'll share the link.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
     "noResults": "No case studies match this filter yet."
   },
   "filters": {
@@ -59,9 +62,8 @@
         "Improved accessibility compliance through VPAT initiatives",
         "Established dashboard patterns reused by later reporting products"
       ],
-      "impact": "The audience — healthcare executives, medical directors, and account managers — needs to trust a number before they act on it. Most of the work is making that trust legible at a glance.",
-      "cta": "Open full case study",
-      "passwordNote": "Password protected"
+      "impact": "Healthcare executives, medical directors, and account managers need to trust a number before they act on it. Most of the work is making that trust legible at a glance.",
+      "cta": "Open full case study"
     },
     "siga-emergencia": {
       "headline": "Improving emergency care workflows for healthcare professionals",
@@ -77,8 +79,7 @@
         "Led emergency and inpatient experience initiatives end to end"
       ],
       "impact": "",
-      "cta": "Open full case study",
-      "passwordNote": "Password protected"
+      "cta": "Open full case study"
     },
     "carrefour": {
       "headline": "Reducing customer support complexity across enterprise operations",
@@ -94,8 +95,7 @@
         "42% reduction in user error rate"
       ],
       "impact": "Agents were navigating a patchwork of legacy tools to resolve a single case. Most of the work was collapsing that into workflows that hold up at high volume.",
-      "cta": "Open full case study",
-      "passwordNote": "Password protected"
+      "cta": "Open full case study"
     },
     "interage": {
       "headline": "Designing healthcare tools that support safer clinical decisions",
@@ -110,8 +110,7 @@
         "Simplified access to critical clinical data during time-sensitive decisions"
       ],
       "impact": "",
-      "cta": "Open full case study",
-      "passwordNote": "Password protected"
+      "cta": "Open full case study"
     }
   },
   "contact": {
