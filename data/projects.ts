@@ -59,7 +59,9 @@ export const projects: Project[] = [
     technologies: ["Figma", "Miro", "Design System"],
     tags: ["healthcare", "enterprise", "ai"],
     image: "/projects/siga-emergencia.svg",
-    access: "restricted",
+    access: "public",
+    figmaUrl:
+      "https://www.figma.com/deck/Jjz4UqDUv3Xm8gR2WY6Bck/Lucas-Cardoso---Product-Designer---Portfolio-Hapvida?node-id=1-5327&viewport=-133%2C-89%2C0.62&t=C4RG1qP9i0PkL2G0-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
   },
   {
     id: "carrefour",
@@ -71,7 +73,9 @@ export const projects: Project[] = [
     technologies: ["Figma", "Salesforce Service Cloud", "Miro"],
     tags: ["enterprise"],
     image: "/projects/carrefour.svg",
-    access: "restricted",
+    access: "public",
+    figmaUrl:
+      "https://www.figma.com/deck/1SLuFj4fRltgajxZlQQCgo/Carrefour-s-Support-Platform?node-id=2002-312&viewport=-133%2C-89%2C0.62&t=SmWbNP1U05jINEzj-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
   },
   {
     id: "interage",

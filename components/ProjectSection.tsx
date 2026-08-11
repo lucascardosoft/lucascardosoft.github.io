@@ -181,7 +181,7 @@ export function ProjectSection({ project, index }: ProjectSectionProps) {
         </div>
 
         <motion.div
-          className="order-1 overflow-hidden rounded-2xl border border-border lg:order-2"
+          className="order-1 self-start overflow-hidden rounded-2xl border border-border lg:order-2"
           whileHover={{ y: -4 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
